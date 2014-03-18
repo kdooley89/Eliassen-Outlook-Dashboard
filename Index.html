@@ -1,0 +1,425 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliassen Quick Outlook</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+   
+		
+		
+		
+		
+		
+		
+		<!--GM DOLLARS CHART-->
+		<script type="text/javascript">
+$(function () {
+        $('#gmcompany').highcharts({
+            chart: {
+                backgroundColor: '#F0F0F0',
+                type: 'area'
+            },
+            title: {
+                text: 'GM Dollars '
+            },
+            subtitle: {
+                text: 'Monthly Progress of Eliassen GM Dollars'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                gridLineColor: '#EEEEEE',
+                
+                title: {
+                    text: 'Monthly GM Progress'
+                },
+                
+                
+            
+            
+                
+                
+                labels: {
+                    formatter: function() {
+                        return this.value / 1000000 +'M';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                series: {
+                fillOpacity: 0.50
+            },
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [2330495, 3405239, 4192814, 6419232, 14929316, 23826119, 44321512, 115936492, 149789352, 215274895, 230362876
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 13304950, 14052390, 21928140, 34192320, 11929316, 22826119, 41321512, 110936492, 146789352, 210274895, 219362876
+               ]
+            }]
+        });
+    });
+		</script>
+		<!--END GM DOLLARS-->
+		
+		<!--START STARTS BY REGION-->
+		<script type="text/javascript">
+$(function () {
+        $('#startsbyregion').highcharts({
+            chart: {
+                 backgroundColor: '#F0F0F0',
+                type: 'column'
+            },
+            title: {
+                text: 'Starts By Region'
+            },
+            subtitle: {
+                text: 'As of 2/20/2014'
+            },
+            xAxis: {
+                categories: ['New England', 'Mid-Atlantic', 'Midwest', 'Great Lakes', 'Southeast', 'National', 'Agile', 'Life Sciences'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                gridLineColor: '#EEEEEE',
+                min: 0,
+                title: {
+                    text: 'Starts',
+                    align: 'middle'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' Starts'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true,
+                enabled: false
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: '2014',
+                data: [301, 155, 59, 115, 53]
+            }]
+        });
+    });
+    	</script>
+<!--END STARTS BY REGION-->
+		
+	
+	<!--Consultants On Billing CHART-->
+		<script type="text/javascript">
+$(function () {
+        $('#conbilling').highcharts({
+            chart:{
+                backgroundColor: '#F0f0f0', 
+                type: 'area'
+            },
+            
+            title: {
+                text: 'Consultants On Billing '
+            },
+            subtitle: {
+                text: 'Consultants by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+            gridLineColor: '#EEEEEE',
+                title: {
+                    text: 'Consultants'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                series: {
+                fillOpacity: 0.50
+            },
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+		<!--END consultants on billing-->
+	
+	
+
+	<body>
+
+	<div class="off-canvas-wrap">
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+                <h1 class="title">Company Wide Metrics <i class="fa fa-bar-chart-o fa-lg"></i></h1>
+
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Menu</label></li>
+    
+        <li><a href="#"><i class="fa-fw fa fa-circle fa-1x"></i>&nbsp;Company Overview</a></li>
+        <li> <a href="monthly-regional.html"><i class="fa-fw fa fa-map-marker fa-1x"></i>&nbsp;Monthly Regional</a></li>
+        <li> <a href="weekly-regional.html"><i class="fa-fw fa fa-group fa-1x"></i> &nbsp;Weekly Regional</a></li>
+        <li> <a href="weekly-regional.html"><i class="fa-fw fa fa-building-o fa-1x"></i>&nbsp;Monthly By Office</a></li>
+        
+      </ul>
+    </aside>
+
+    <section class="main-section">
+	<!--END NAVIGATION CONTAINER-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--GRID CONTAINER-->
+	
+	<div class="large-12 columns" style="padding:5px;">
+	
+	
+	
+	<!--top performers-->
+	<div class="large-4 columns">
+    <div class="box">
+      <h5><i class="fa-fw fa fa-trophy"></i>&nbsp;|&nbsp;Top 5 Recruiters</h5>
+
+      <ol>
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+      </ol>
+    </div>
+  </div>
+    
+    
+	<div class="large-4 columns">
+	    <div class="box">
+      <h5><i class="fa-fw fa fa-trophy"></i>&nbsp;|&nbsp;Top 5 Accout Executives</h5>
+
+      <ol>
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+
+        <li>First Name Last Name</li>
+      </ol>
+    </div>
+	</div>
+	
+	
+	<div class="large-4 columns">
+	    <div class="box">
+      <h5><i class="fa-fw fa fa-check"></i>&nbsp;|&nbsp;Best Client FIll Rate</h5>
+
+      <ol>
+        <li>Company One</li>
+
+        <li>Company Two</li>
+
+        <li>Company Three</li>
+
+        <li>Company Four</li>
+
+        <li>Company Five</li>
+      </ol>
+    </div>
+	</div>
+	
+	
+	
+	
+	<!--start first container-->
+<div class="larger-12 columns" style="margin-bottom:5px; padding:0px;">
+<div class="large-6 columns">
+<div id="gmcompany" style="width:100%; height:350px; margin-top:5px;"></div>
+</div>
+
+ <div class="large-6 columns">
+ 	         <div id="conbilling" style="width:100%; height:350px; margin-top:5px;"></div>
+ 	     </div>
+
+
+</div>
+
+<!--end first container-->
+
+
+
+
+
+
+
+
+
+<!--start second container -->
+<div class="large-12 columns" style="padding:15px;">
+
+    
+    <!--start split container-->
+    <div class="large-6 columns" style="background-color:#F0f0f0; border-radius:5px; margin-bottom:15px;">
+    <div class="large-6 columns" style="padding:10px;">
+    
+    <div class="large-12 medium-12 columns" style="text-align:center;">
+        <h3 class="itemname">Website Traffic</h3>
+        <h4 class="itemweek">Week of 2/23</h4>
+        <div class="panel">
+        <h1 class="numbers">11,245</h1>  <h5><i class="fa fa-arrow-circle-o-up fa-1x"></i>&nbsp;22.8%</h5>
+        </div>
+        <small>source:Google Analytics</small>
+        <br><br>
+     </div>
+    </div>
+
+    
+    
+    
+    
+    <div class="large-6 columns" style="padding:10px;">
+
+<div class="large-12 medium-12 columns" style="text-align:center;">
+
+          <h3 class="itemname">This Month's Starts</h3>
+        <h4 class="itemweek">Week of 2/23</h4>
+        <div class="panel">
+        <h1 class="numbers">45</h1>  <h5><i class="fa fa-arrow-circle-o-up fa-1x"></i>&nbsp;11.8%</h5>
+        </div>
+        <small>source:erecruit</small>
+        <br>
+        <br>
+     </div>
+     </div>
+     </div>
+     
+<div class="large-6 medium-12 columns">
+    
+        <div id="startsbyregion" style="width:100%; height:250px;"></div>
+       <br>
+         </div>
+
+         </div>
+         <!--end second container-->
+         	     
+ 	     </div><!--END GRID CONTAINER-->
+ 	      
+ 	     </section>
+
+  <a class="exit-off-canvas"></a>
+  </div>
+</div>
+ 
+ 	  
+ 	     
+ 	  
+ 	     
+ 	     <script src="js/highcharts/highcharts.js"></script>
+        <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    
+    
+    
+  </body>
+</html>

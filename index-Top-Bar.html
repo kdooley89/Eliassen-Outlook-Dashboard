@@ -1,0 +1,616 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliassen Quick Outlook</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+		
+		
+		<!--GM DOLLARS CHART-->
+		<script type="text/javascript">
+$(function () {
+        $('#gmcompany').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'GM Dollars '
+            },
+            subtitle: {
+                text: 'Monthly Progress of Eliassen GM Dollars'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Monthly GM Progress'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1000000 +'M';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [2330495, 3405239, 4192814, 6419232, 14929316, 23826119, 44321512, 115936492, 149789352, 215274895, 230362876
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 13304950, 14052390, 21928140, 34192320, 11929316, 22826119, 41321512, 110936492, 146789352, 210274895, 219362876
+               ]
+            }]
+        });
+    });
+		</script>
+		<!--END GM DOLLARS-->
+		
+		<!--START STARTS BY REGION-->
+		<script type="text/javascript">
+$(function () {
+        $('#startsbyregion').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Starts By Region'
+            },
+            subtitle: {
+                text: 'As of 2/20/2014'
+            },
+            xAxis: {
+                categories: ['New England', 'Mid-Atlantic', 'Midwest', 'Great Lakes', 'Southeast', 'National', 'Agile', 'Life Sciences'],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Starts',
+                    align: 'middle'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' Starts'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Year 2013',
+                data: [254, 114, 52, 91, 29]
+            }, {
+                name: 'Year 2014',
+                data: [301, 155, 59, 115, 53]
+            }]
+        });
+    });
+    	</script>
+<!--END STARTS BY REGION-->
+		
+	
+	<!--Consultants On Billing CHART-->
+		<script type="text/javascript">
+$(function () {
+        $('#conbilling').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'Consultants On Billing '
+            },
+            subtitle: {
+                text: 'Consultants by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Consultants'
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+		<!--END consultants on billing-->
+	
+	
+	<!--New England Headcount-->
+			<script type="text/javascript">
+$(function () {
+        $('#neheadcount').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'New England Headcount '
+            },
+            subtitle: {
+                text: 'Actual Vs Projected by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: ' '
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+	<!--End New Enlgand Headcount-->
+	
+	
+	
+	
+	<!--Mid-Atlantic Headcount-->
+			<script type="text/javascript">
+$(function () {
+        $('#midatlanticheadcount').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'Mid-Atlantic Headcount '
+            },
+            subtitle: {
+                text: 'Actual Vs Projected by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: ' '
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+	<!--End Mid-Atlantic Headcount-->
+	
+	
+	
+	<!--Southeast Headcount-->
+			<script type="text/javascript">
+$(function () {
+        $('#southeastheadcount').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'Southeast Headcount '
+            },
+            subtitle: {
+                text: 'Actual Vs Projected by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: ' '
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+	<!--End Southeast Headcount-->
+	
+	
+	<!--Quadstates Headcount-->
+			<script type="text/javascript">
+$(function () {
+        $('#quadstatesheadcount').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'Quad States Headcount '
+            },
+            subtitle: {
+                text: 'Actual Vs Projected by Month'
+            },
+           xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: ' '
+                },
+                labels: {
+                    formatter: function() {
+                        return this.value / 1 +' ';
+                    }
+                }
+            },
+           tooltip: {
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                    this.x +': '+ this.y;
+                }
+            },
+            plotOptions: {
+                area: {
+                    pointStart:0,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 2,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Actual',
+                data: [22, 44, 35, 19, 69, 77, 90, 55, 86, 112, 117, 122
+                 ]
+            }, {
+                name: 'Projected',
+                data: [
+                 25, 40, 31, 22, 73, 79, 70, 66, 80, 100, 110, 136
+               ]
+            }]
+        });
+    });
+		</script>
+	<!--End Quad States Headcount-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<body>
+
+	<!--start sticky nav-->
+	<div class="contain-to-grid sticky">
+	<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Outlook Dashboard</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><a href="#">Internal</a></li>
+      <li class="has-dropdown">
+        <a href="#">Eliassen.com Links</a>
+        <ul class="dropdown">
+          <li><a href="#">Set Link List Here</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+	<!--end sticky nav-->
+	
+	
+	</div>
+	
+	<!--start first container-->
+<div class="larger-12 columns" style="margin-bottom:25px;">
+    <div class="large-3 columns" style="padding:20px; border:2px solid #EEEEEE; margin-top:20px;">
+    
+    <div class="large-12 medium-12 columns" style="text-align:center;">
+        <h3 class="itemname">Website Traffic</h3>
+        <h4 class="itemweek">Week of 2/23</h4>
+        <div class="panel">
+        <h1 class="numbers">11,245</h1>  <h5><i class="fa fa-arrow-circle-o-up fa-1x"></i>&nbsp;22.8%</h5>
+        </div>
+        <small>source:Google Analytics</small>
+     </div>
+    </div>
+
+
+
+<div class="large-9 columns">
+<div id="gmcompany" style="width:100%; height:70%; max-height:250px;"></div>
+</div>
+</div>
+
+<!--end first container-->
+
+<!--start second container -->
+
+<div class="large-12 columns" style="margin-bottom:25px; border-bottom:solid #002d76 12px; border-top:solid #002d76 12px;">
+
+    <div class="large-3 columns" style="margin-bottom:20px;">
+
+<div class="large-12 medium-12 columns" style="text-align:center; border:2px #EEEEEE solid;  margin-top:20px; padding:20px;">
+
+          <h3 class="itemname">This Month's Starts</h3>
+        <h4 class="itemweek">Week of 2/23</h4>
+        <div class="panel">
+        <h1 class="numbers">45</h1>  <h5><i class="fa fa-arrow-circle-o-up fa-1x"></i>&nbsp;11.8%</h5>
+        </div>
+        <small>source:erecruit</small>
+     </div>
+     
+     </div>
+     
+<div class="large-9 medium-12 columns">
+    
+        <div id="startsbyregion" style="width:100%;  height:70%; max-height:250px;"></div>
+        </div>
+
+         </div>
+         <!--end second container-->
+        
+     	  
+     	  <!--start container three-->
+     	  <div class="large-12 columns" style="margin-bottom:25px; border-bottom: 12px solid #002d76;">
+
+     	     <div class="large-3 columns">
+<div class="large-12 medium-12 columns" style="text-align:center; border:2px #EEEEEE solid;  margin-top:20px; padding:20px;">
+
+          <h3 class="itemname">YTD Starts</h3>
+        <h4 class="subheader">As of 2/23</h4>
+        <div class="panel">
+        <h1 class="numbers">145</h1>  <h4><i class="fa fa-arrow-circle-o-down fa-1x"></i>&nbsp;2.1%</h4>
+        </div>
+        <small>source:erecruit</small>
+     </div>
+     </div>
+ 	     <div class="large-9 columns">
+ 	         <div id="conbilling" style="width:100%; height:100%; max-height:350px;"></div>
+ 	     </div>
+ 	     </div>
+ 	     <!--end container three-->
+ 	  
+ 	  
+ 	  
+ 	  
+ 	  
+<div class="large-12 columns" style="margin-bottom:25px;">
+    
+        <div class="large-6 columns">
+        <div id="neheadcount" style="width:100%; height:100%; max-height:200px;">
+        </div>
+        </div>
+        
+        <div class="large-6 columns">
+            <div id="midatlanticheadcount" style="width:100%; height:100%; max-height:200px;">
+        </div>
+        </div>
+
+</div> 	     
+ 	     
+ 	     <div class="large-12 columns" style="margin-bottom:25px;">
+ 	     <div class="large-6 columns">
+ 	     <div id="southeastheadcount" style="width:100%; height:100%; max-height:200px;"></div>
+</div>
+ 	     <div class="large-6 columns">
+ 	     <div id="quadstatesheadcount" style="width:100%; height:100%; max-height:200px;"></div>
+</div>
+</div>
+ 	     
+ 	     
+ 	     
+ 	    <!--Start Footer--> 
+ 	     <div class="large-12 columns" style="background-color:#EEEEEE;">
+ 	         
+ 	         
+ 	     </div>
+ 	     <!--End Footer-->
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     
+ 	     <script src="js/highcharts/highcharts.js"></script>
+        <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
